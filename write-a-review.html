@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a review</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="MINI-PROJECT.css"> -->
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+
+    .head {
+        position: fixed;
+        background-color: white;
+        /* border-bottom: 1px solid black; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 69px;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .left-menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 550px;
+    }
+
+    .top-buttons {
+        cursor: pointer;
+        font-weight: bold;
+        color: #88b06a;
+        font-family: 'Slabo 13px', serif;
+        background-color: white;
+        border: none;
+        font-size: medium;
+    }
+
+
+    .top-buttons:hover {
+        color: #79876e;
+    }
+
+
+    #top-heading {
+        padding-left: 8px;
+        font-size: 22px;
+        color: #88b06a;
+        font-family: 'Ultra', serif;
+        background-color: white;
+        border: none
+    }
+
+    #top-heading:hover {
+        color: #79876e;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 500px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+        row-gap: 30px;
+    }
+
+    .body {
+        -webkit-box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+        box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+
+        position: absolute;
+        /* margin-left: 10px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        width: 60vw;
+        height: 70vh;
+        top: 15%;
+        left: 20%;
+    }
+
+    #name {
+        padding-left: 8px;
+        height: 35px;
+        width: 177px;
+        margin-left: 80px;
+        border-radius: 5px;
+        border: 0.5px solid #808080;
+    }
+
+    #pro {
+        padding-left: 8px;
+        height: 35px;
+        width: 177px;
+        margin-left: 68px;
+        border-radius: 5px;
+        border: 0.5px solid #808080;
+    }
+
+    #txtarea {
+        padding-left: 8px;
+        height: 65px;
+        margin-left: 125px;
+        border-radius: 5px;
+        border: 0.5px solid #808080;
+        resize: none;
+    }
+
+    #submit {
+        width: 18vw;
+        height: 30px;
+        background-color: #88b06a;
+        border: none;
+        color: white;
+
+    }
+</style>
+
+<body>
+    <div class="head">
+        <div class="left-menu">
+            <div id="Close">
+                <i id="cross" class="fa-solid fa-bars" style="color:#88b06a"></i>
+            </div>
+            <div>
+                <button id="top-heading" onclick="window.location.href ='MINI-PROJECT.html';">
+                    Vitthal Textile Pvt. Ltd
+                </button>
+            </div>
+        </div>
+        <div class="links">
+            <button class="top-buttons" onclick="window.location.href = 'login-page.html';">Login</button>
+            <span style="color: #88b06a;">|</span>
+            <button class="top-buttons" onclick="window.location.href = 'sign-up.html';">Sign up</button>
+            <span style="color: #88b06a;">|</span>
+            <button class="top-buttons">Gallery</button>
+            <span style="color: #88b06a;">|</span>
+            <button class="top-buttons" onclick="window.location.href = 'https://www.google.com/maps/place/Vitthal+Textile+Pvt.+Ltd./@21.32799,74.95592,17z/data=!4m6!3m5!1s0x3bdf2d3075fed54b:0x44b62f34d145ad90!8m2!3d21.3279896!4d74.95592!16s%2Fg%2F11df7q7gk9?hl=en'">Get Directions</button>
+        </div>
+    </div>
+    <div class="body">
+        <form action="" class="main">
+            <h2 style="margin-left: 70px; color: #88b06a; 
+            font-family: 'Slabo 13px', serif;
+    ">Write a Review</h2>
+            <div>
+                Name: <input type="text" placeholder="Name" id="name">
+            </div>
+            <div>
+                Product: <input type="text" placeholder="Product bought" id="pro">
+            </div>
+            <div>
+                <p>Experience: </p>
+                <textarea name="" cols="30" rows="10" placeholder="Enter your experience with us"
+                    id="txtarea"></textarea>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/1b442dac0b.js" crossorigin="anonymous"></script>
+<script>
+    var x = document.getElementById("cross")
+    function myFunction() {
+        x.classList.toggle("fa-bars")
+        x.classList.toggle("fa-xmark")
+    }
+</script>
+
+</html>

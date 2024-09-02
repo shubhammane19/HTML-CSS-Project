@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-page.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="credentials">
+                <form action = LoginServlet method=post>
+                    <div class="full-username" style="display: flex;
+                    flex-direction: row;">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username or Email" id="username" name="username">
+                    </div>
+                    <div class="full-password" style="display: flex;
+                flex-direction: row;">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="password" name="pass">
+                    </div>
+                    <div id="button">
+                        <label id="me" for=""><input type="checkbox" name="" style="margin-right: 6px;  ">Remember
+                            me</label>
+                        <button id="login" onclick="submitPassword()" name="login">LOGIN</button>
+                    </div>
+                </form>
+                <div class="seperation">
+                    <p style="color: #cbc5c5;">_________________________________</p>
+                </div>
+                <div id="facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="facebook-a" viewBox="0 0 512 512">
+                        <path
+                            d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
+                    </svg><button id="facebook-button">
+                        LOGIN WITH FACEBOOK</button>
+                </div>
+                <div id="twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="twitter-a" viewBox="0 0 512 512">
+                        <path
+                            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+                    </svg>
+                    <button id="twitter-button">LOGIN WITH TWITTER</button>
+                </div>
+                <div id="google">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="google-a" viewBox="0 0 488 512">
+                        <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                    </svg><button id="google-button">
+                        LOGIN WITH GOOGLE</button>
+                </div>
+                <p>Don't have an account?<button style="border: none;
+                                                        background-color: white;
+                                                        color:blue;
+                                                        cursor: pointer;"
+                        onclick="window.location.href = 'Sign-up.html';"> <u> Sign up</u></button>
+                </p>
+            </div>
+        </div>
+        <div class="right">
+            <img src="img/rue-s-XivbqAPEoJg-unsplash.jpg" alt="">
+        </div>
+    </div>
+</body>
+<script src="https://kit.fontawesome.com/1b442dac0b.js" crossorigin="anonymous"></script>
+<script>
+    function check() {
+        var input = document.getElementById("password").value;
+        input = input.trim();
+        if (input === '') {
+            return 0;
+        } else {
+            if (input.length > 7) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+    }
+
+    function submitPassword() {
+        if (check()) {
+            window.open('MINI-PROJECT.html');
+            window.close();
+        } else {
+            alert("Please enter correct password!!!");
+        }
+    }
+
+</script>
+
+</html>

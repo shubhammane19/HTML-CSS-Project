@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.`    gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <link rel="stylesheet" href="photos.css">
+</head>
+
+<body>
+    <div class="head">
+        <div class="left-menu">
+            <div id="Close">
+                <i id="cross" class="fa-solid fa-bars" style="color:#88b06a"></i>
+            </div>
+            <div>
+                <button id="top-heading" onclick="window.location.href ='MINI-PROJECT.html';">
+                    Vitthal Textile Pvt. Ltd
+                </button>
+            </div>
+        </div>
+        <div class="links">
+            <button class="top-buttons" onclick="window.location.href = 'login-page.html';">Login</button>
+            <span style="color: #88b06a;">|</span>
+            <button class="top-buttons" onclick="window.location.href = 'sign-up.html';">Sign up</button>
+            <span style="color: #88b06a;">|</span>
+            <button class="top-buttons">Gallery</button>
+            <span style="color: #88b06a;">|</span>
+            <button class="top-buttons" onclick="window.location.href = 'https://www.google.com/maps/place/Vitthal+Textile+Pvt.+Ltd./@21.32799,74.95592,17z/data=!4m6!3m5!1s0x3bdf2d3075fed54b:0x44b62f34d145ad90!8m2!3d21.3279896!4d74.95592!16s%2Fg%2F11df7q7gk9?hl=en'">Get Directions</button>
+        </div>
+    </div>
+    <button class="prev" onclick="goPrev()">&lt;</button>
+    <button class="next" onclick="goNext()">&gt;</button>
+    <h3>Gallery</h3>
+    <div class="ph">
+        <img src="img/img6.jpeg" alt="" class="slide">
+        <img src="img/img1.jpeg" alt="" class="slide">
+        <img src="img/img2.jpeg" alt="" class="slide">
+        <img src="img/img3.jpeg" alt="" class="slide">
+        <img src="img/img4.jpeg" alt="" class="slide">
+        <img src="img/img5.jpeg" alt="" class="slide">
+    </div>
+</body>
+
+<script src="https://kit.fontawesome.com/1b442dac0b.js" crossorigin="anonymous"></script>
+<script>
+    const slides = document.querySelectorAll(".slide")
+    var counter = 0;
+    console.log(slides)
+    slides.forEach(
+        (slide, index) => {
+            slide.style.left = `${index * 100}%`
+        }
+    )
+
+    const goNext = () => {
+        if (counter < slides.length - 1) {
+            counter++;
+            slideImage();
+        }
+    };
+    const goPrev = () => {
+        if (counter != 0) {
+            counter--;
+            slideImage();
+        }
+    };
+
+    const slideImage = () => {
+        slides.forEach(
+            (slide) => {
+                slide.style.transform = `translateX(-${counter * 100}%)`
+            }
+
+        )
+    }
+</script>
+
+</html>

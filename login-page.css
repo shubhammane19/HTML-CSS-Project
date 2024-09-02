@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.main {
+    -webkit-box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+    box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+    margin-top: 109px;
+    margin-left: 318px;
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.left {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    width: 50%;
+    object-fit: cover;
+}
+
+img {
+    width: 461px;
+    height: 536px;
+}
+
+.credentials {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#username,
+#password {
+    cursor: pointer;
+    width: 240px;
+    height: 40px;
+    border: none;
+}
+
+#username.active,
+#password.active {
+    width: 240px;
+    height: 40px;
+    border: 1px solid red;
+}
+
+#button {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    column-gap: 73px;
+}
+
+.fa-solid.fa-user,
+.fa-solid.fa-lock {
+    cursor: pointer;
+    border: none;
+    border-color: grey;
+    color: #808080;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: fit-content;
+    border-right: #808080 0.5px solid;
+}
+
+.full-username,
+.full-password {
+    border: 0.5px solid #808080;
+    border-radius: 5px;
+}
+
+#login {
+    cursor: pointer;
+    border: none;
+    background-color: #88b06a;
+    width: 79px;
+    height: 37px;
+    border-radius: 9px;
+    margin-right: 4px;
+    color: white;
+}
+
+#login:hover {
+    background-color: #79876e;
+}
+
+#me {
+    padding-top: 12px;
+    color: #808080;
+}
+
+#facebook-button,
+#twitter-button,
+#google-button {
+    cursor: pointer;
+    width: 230px;
+    height: 37px;
+    border: none;
+    color: white;
+    border-radius: 8px;
+}
+
+#facebook,
+#twitter,
+#google {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#facebook,
+#facebook-button {
+    background-color: #4267B2;
+}
+
+#twitter,
+#twitter-button {
+    background-color: #00acee;
+}
+
+#google-button,
+#google {
+    background-color: #db4a39;
+}
+
+#facebook-a {
+    background-color: #052567;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#twitter-a {
+    background-color: #0080b1;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+#google-a {
+    background-color: #ae1806;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+}
+
+svg {
+    padding-left: 8px;
+    padding-right: 8px;
+    fill: white;
+    height: 38px;
+    width: 38px;
+}
+
+input:focus{
+    outline: none;
+}   
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}

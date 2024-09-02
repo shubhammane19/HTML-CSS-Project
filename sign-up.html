@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #heading {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 20px;
+    }
+
+    #user {
+        margin-left: 81px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    #pass {
+        margin-left: 86px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    #ren {
+        margin-left: 20px;
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    #sub {
+        padding: 5px;
+        padding-inline: 10px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #88b06a;
+        color: white;
+        border: none;
+        width: 200px;
+        margin-left: 80px;
+        border-radius: 8px;
+        height: 35px;
+    }
+
+    #form {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        /* width: 200px; */
+    }
+
+    .body {
+        -webkit-box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+        box-shadow: 2px 1px 22px 5px rgba(0, 0, 0, 0.19);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        /* border: 1px solid black; */
+        width: 60vw;
+        height: 70vh;
+    }
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+</head>
+<script>
+    function validation() {
+        var name = document.f1.Name.value;
+        var pass = document.f1.pass.value;
+        var enter = document.f1.re.value;
+
+        if (name == null || name == "") {
+            alert("Please enter username.");
+            return false;
+        } else if (pass.length < 6) {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        } else if (pass != enter) {
+
+            alert('Both passwords should be same.');
+            return false;
+        } else {
+            alert("Login successful.");
+            return true;
+        }
+    }
+    function open_page() {
+        if (validation() == 1) {
+            window.open('MINI-PROJECT.html');
+            window.close('sign-up.html');
+        }
+    }
+</script>
+
+<body style="display: flex;
+             flex-direction: row;
+             justify-content: center;
+             align-items: center;">
+    <div class="body">
+        <h1 id="heading" style="color: #88b06a;">Sign-up credentials :</h1><br>
+        <div class="login">
+            <div>
+                <form name="f1" id="form" onsubmit="return validation()">
+                    <div>
+                        Username : <input type="text" , name="Name" , id="user">
+                    </div>
+                    <div>
+                        Password : <input type="password" , name="pass" , id="pass">
+                    </div>
+                    <div>
+                        Re-enter Password : <input type="password" , name="re" , id="ren">
+                    </div>
+                    <input type="submit" value="Sign-up" id="sub" onclick="open_page()">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
